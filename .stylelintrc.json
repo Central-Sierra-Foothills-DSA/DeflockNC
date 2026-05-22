@@ -1,0 +1,9 @@
+{
+  "extends": ["stylelint-config-standard"],
+  "rules": {
+    "declaration-block-single-line-max-declarations": null,
+    "no-descending-specificity": null,
+    "keyframes-name-pattern": null,
+    "rule-empty-line-before": null
+  }
+}
