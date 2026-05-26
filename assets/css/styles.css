@@ -670,6 +670,26 @@ footer p {
   text-transform: uppercase;
 }
 
+footer .footer-links {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+footer .footer-links a {
+  color: var(--red);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+footer .footer-links a:hover {
+  color: #fff;
+}
+
+footer .footer-links span {
+  color: var(--muted);
+}
+
 /* ── ANIMATIONS ── */
 @keyframes fadeUp {
   from {
