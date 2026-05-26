@@ -17,3 +17,37 @@ document.querySelectorAll(".stat-cell, .demand-item, .agency-item").forEach((el)
   el.style.transition = "opacity 0.5s, transform 0.5s";
   observer.observe(el);
 });
+
+// Short/long toggle for sample public comment
+document.querySelectorAll(".comment-tab").forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const target = tab.dataset.show;
+    document
+      .querySelectorAll(".comment-tab")
+      .forEach((t) => t.classList.toggle("active", t === tab));
+    document
+      .querySelectorAll(".comment-box")
+      .forEach((box) => box.classList.toggle("hidden", box.dataset.length !== target));
+  });
+});
+
+// Copy-to-clipboard for sample public comment
+document.querySelectorAll("[data-copy-target]").forEach((btn) => {
+  btn.addEventListener("click", async () => {
+    const target = document.querySelector(btn.dataset.copyTarget);
+    if (!target) return;
+    const text = target.innerText.trim();
+    try {
+      await navigator.clipboard.writeText(text);
+      const original = btn.textContent;
+      btn.textContent = "Copied!";
+      btn.classList.add("copied");
+      setTimeout(() => {
+        btn.textContent = original;
+        btn.classList.remove("copied");
+      }, 1800);
+    } catch (e) {
+      btn.textContent = "Copy failed — select & copy manually";
+    }
+  });
+});

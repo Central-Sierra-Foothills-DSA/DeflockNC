@@ -713,6 +713,151 @@ body::before {
   line-height: 1.65;
 }
 
+/* ── UPCOMING MEETINGS ── */
+.meetings {
+  padding: 80px 5vw;
+  background: var(--dark);
+  border-top: 3px solid var(--red);
+}
+
+.meetings-heading {
+  font-family: var(--display);
+  font-weight: 900;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.meetings-sub {
+  font-size: 1.05rem;
+  color: #9aa6b2;
+  line-height: 1.6;
+  max-width: 60ch;
+  margin-bottom: 2rem;
+}
+
+/* ── SAMPLE COMMENT ── */
+.comment {
+  padding: 80px 5vw;
+  background: var(--black);
+  border-top: 3px solid var(--red);
+}
+
+.comment-heading {
+  font-family: var(--display);
+  font-weight: 900;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  text-transform: uppercase;
+  line-height: 0.95;
+  margin-bottom: 1rem;
+}
+
+.comment-heading em {
+  color: var(--red);
+  font-style: normal;
+}
+
+.comment-sub {
+  font-size: 1.05rem;
+  color: #9aa6b2;
+  line-height: 1.6;
+  max-width: 60ch;
+  margin-bottom: 2.5rem;
+}
+
+.comment-tabs {
+  display: flex;
+  gap: 1px;
+  margin-bottom: 1px;
+  max-width: 70ch;
+}
+
+.comment-tab {
+  flex: 1;
+  background: var(--dark);
+  border: 1px solid rgb(255 255 255 / 8%);
+  border-bottom: none;
+  color: #9aa6b2;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.9rem 1rem;
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+}
+
+.comment-tab:hover {
+  color: #fff;
+}
+
+.comment-tab.active {
+  background: var(--red);
+  color: #fff;
+  border-color: var(--red);
+}
+
+.comment-box.hidden {
+  display: none;
+}
+
+.comment-box {
+  background: var(--dark);
+  border-left: 3px solid var(--red);
+  padding: 2rem;
+  font-family: var(--mono);
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: #cdd6df;
+  max-width: 70ch;
+}
+
+.comment-box p {
+  margin: 0 0 1rem;
+}
+
+.comment-box p:last-child {
+  margin-bottom: 0;
+}
+
+.comment-box strong {
+  color: #fff;
+  font-weight: 700;
+}
+
+.comment-blank {
+  display: inline-block;
+  padding: 0 0.4rem;
+  border-bottom: 1px dashed var(--red);
+  color: var(--red);
+  font-style: italic;
+}
+
+.comment-copy {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.85rem 1.4rem;
+  background: var(--red);
+  color: #fff;
+  border: none;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.comment-copy:hover {
+  background: #b91c1c;
+}
+
+.comment-copy.copied {
+  background: #16a34a;
+}
+
 /* ── ACTION ── */
 .action {
   padding: 80px 5vw;
