@@ -456,6 +456,47 @@ body::before {
   text-transform: uppercase;
 }
 
+.photo-caption a {
+  color: var(--red);
+  text-decoration: none;
+}
+
+.photo-caption a:hover {
+  color: #fff;
+}
+
+.photo-link {
+  display: block;
+  height: 100%;
+  text-decoration: none;
+  position: relative;
+}
+
+.photo-link-overlay {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--red);
+  color: #fff;
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.45rem 0.7rem;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.photo-item:hover .photo-link-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* ── FEDERAL AGENCIES ── */
 .federal {
   padding: 80px 5vw;
@@ -518,6 +559,64 @@ body::before {
 }
 .agency-item.low .agency-count {
   color: #5c9bff;
+}
+
+/* ── FLOCK 101 ── */
+.flock101 {
+  padding: 80px 5vw;
+  background: var(--dark);
+  border-top: 3px solid var(--red);
+}
+
+.flock101-heading {
+  font-family: var(--display);
+  font-weight: 900;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.flock101-sub {
+  font-size: 1.05rem;
+  color: #9aa6b2;
+  line-height: 1.6;
+  max-width: 60ch;
+  margin-bottom: 2.5rem;
+}
+
+.flock101-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: rgb(255 255 255 / 5%);
+  border: 1px solid rgb(255 255 255 / 5%);
+}
+
+.flock101-item {
+  background: var(--dark);
+  padding: 2rem;
+  border-left: 3px solid var(--red);
+  transition: background 0.2s;
+}
+
+.flock101-item:hover {
+  background: #161b22;
+}
+
+.flock101-q {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.6rem;
+  color: var(--white);
+}
+
+.flock101-a {
+  font-size: 0.95rem;
+  color: #9aa6b2;
+  line-height: 1.7;
 }
 
 /* ── WHAT WE WANT ── */
