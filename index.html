@@ -383,10 +383,28 @@
         Don't Know What To Say?<br /><em>Read This.</em>
       </h2>
       <p class="comment-sub">
-        Public comment is usually capped at 3 minutes. Pick the version that fits your slot,
-        add your name, and read it.
+        Pick the body you're addressing, choose a length, add your name, and read it. Public
+        comment is usually capped at 3 minutes.
       </p>
-      <div class="comment-tabs" role="tablist">
+      <div class="comment-jurisdictions" role="tablist" aria-label="Choose the body">
+        <button
+          type="button"
+          class="comment-jurisdiction active"
+          data-jurisdiction="gv"
+          role="tab"
+        >
+          For Grass Valley City Council
+        </button>
+        <button
+          type="button"
+          class="comment-jurisdiction"
+          data-jurisdiction="ncso"
+          role="tab"
+        >
+          For Nevada County Board of Supervisors
+        </button>
+      </div>
+      <div class="comment-tabs" role="tablist" aria-label="Choose a length">
         <button type="button" class="comment-tab active" data-show="short" role="tab">
           Short (~1 min)
         </button>
@@ -397,47 +415,44 @@
           Long (~3 min)
         </button>
       </div>
-      <div class="comment-box" data-length="short">
+      <div class="comment-box" data-jurisdiction="gv" data-length="short">
         <p>
-          My name is <span class="comment-blank">[your name]</span>, I'm a resident of
-          <span class="comment-blank">[Nevada County / Grass Valley / Nevada City]</span>, and
-          I'm here to ask you to terminate our contracts with Flock Safety.
+          My name is <span class="comment-blank">[your name]</span>, I'm a resident of Grass
+          Valley, and I'm here to ask the council to terminate our contract with Flock Safety.
         </p>
         <p>
           Public records obtained through the California Public Records Act show that the Flock
-          cameras owned by NCSO, Grass Valley PD, and Nevada City PD have been searched
-          <strong>over 13 million times</strong> by
-          <strong>4,654 different outside agencies</strong>, with more than
+          cameras owned by Grass Valley PD have been searched
+          <strong>over 7.5 million times</strong> by outside agencies, with more than
           <strong>five million</strong> of those searches coming from agencies outside
           California, which directly violates California Civil Code Section 1798.90.55(b).
         </p>
         <p>
           The same data shows
-          <strong>1,175 searches by federal immigration enforcement</strong>, every one of them
-          happening after the California Attorney General explicitly prohibited that kind of
-          sharing in October 2023.
+          <strong>1,175 searches of Grass Valley cameras by federal immigration enforcement</strong>,
+          every one of them happening after the California Attorney General explicitly prohibited
+          that kind of sharing in October 2023.
         </p>
         <p>
           Over thirty communities have already ended their Flock contracts, with Santa Cruz
-          becoming the first city in California to do so, and we are asking you to make Nevada
-          County the next. Thank you.
+          becoming the first city in California to do so, and we are asking Grass Valley to be
+          the next. Thank you.
         </p>
       </div>
-      <div class="comment-box hidden" data-length="personal">
+      <div class="comment-box hidden" data-jurisdiction="gv" data-length="personal">
         <p>
-          My name is <span class="comment-blank">[your name]</span>, I'm a resident of
-          <span class="comment-blank">[Nevada County / Grass Valley / Nevada City]</span>, and
-          I'm not here as a lawyer or a policy expert but as someone who lives here, drives
-          here, and is raising
-          <span class="comment-blank">[my family / my kids / my neighbors]</span> here, which
-          is why I want to talk about what it means that these cameras went up without ever
-          asking us.
+          My name is <span class="comment-blank">[your name]</span>, I'm a resident of Grass
+          Valley, and I'm not here as a lawyer or a policy expert but as someone who lives
+          here, drives here, and is raising
+          <span class="comment-blank">[my family / my kids]</span> here, which is why I want
+          to talk about what it means that Grass Valley PD's Flock cameras went up without
+          ever asking the people of this city.
         </p>
         <p>
           There was no town hall, no ballot measure, and no public hearing where the question
-          of whether our community should be plugged into a national surveillance network was
-          put to the people who would actually be surveilled by it; instead, the contracts were
-          signed, the cameras went up, and we only found out about any of it because someone
+          of whether our city should be plugged into a national surveillance network was put to
+          the people who would actually be surveilled by it; instead, the contract was signed,
+          the cameras went up, and most of us only found out about any of it because someone
           filed a public records request.
         </p>
         <p>
@@ -458,31 +473,158 @@
         <p>
           None of this is theoretical, either, because ALPR data has been used elsewhere to
           track domestic violence victims to safe houses, to misidentify innocent drivers in
-          ways that have led to guns-drawn traffic stops, and here in our own county it has been
+          ways that have led to guns-drawn traffic stops, and here in Grass Valley it has been
           handed over to federal agencies, including immigration enforcement, that California
           law specifically forbids from receiving it, all of which is to say that this
-          technology has not made our community safer but has only made us watched.
+          technology has not made our city safer but has only made us watched.
         </p>
         <p>
-          I am asking you to undo a decision that was made on our behalf without our voice, to
-          <strong>end the contract</strong>, and to restore the basic principle that in this
-          country the government cannot follow you everywhere unless it has a specific reason
-          to. Thank you.
+          I am asking the council to undo a decision that was made on our behalf without our
+          voice, to <strong>end the contract</strong>, and to restore the basic principle that
+          in this country the government cannot follow you everywhere unless it has a specific
+          reason to. Thank you.
         </p>
       </div>
-      <div class="comment-box hidden" data-length="long">
+      <div class="comment-box hidden" data-jurisdiction="gv" data-length="long">
         <p>
-          My name is <span class="comment-blank">[your name]</span>, I'm a resident of
-          <span class="comment-blank">[Nevada County / Grass Valley / Nevada City]</span>, and
-          I'm here tonight because over the past year our community has been quietly plugged
-          into a national surveillance network operated by a private company called Flock
-          Safety, which is something most residents have no idea happened, and I am asking you
-          to look at the public records yourselves and end these contracts.
+          My name is <span class="comment-blank">[your name]</span>, I'm a resident of Grass
+          Valley, and I'm here tonight because over the past year our city has been quietly
+          plugged into a national surveillance network operated by a private company called
+          Flock Safety, which is something most residents have no idea happened, and I am
+          asking the council to look at the public records yourselves and end this contract.
         </p>
         <p>
-          Since installation, the Flock cameras owned by Nevada County SO, Grass Valley PD, and
-          Nevada City PD have been searched
+          Since installation, the Flock cameras owned by Grass Valley PD have been searched
+          <strong>over 7.5 million times</strong> by outside agencies, with more than
+          <strong>five million</strong> of those searches coming from agencies outside
+          California, which is a direct violation of California Civil Code Section
+          1798.90.55(b), the state law that prohibits sharing automated license plate reader
+          data with any non-California entity.
+        </p>
+        <p>
+          The agencies querying our cameras include
+          <strong>over 264,000 searches by NCRIC</strong>, a federal fusion center based in
+          San Francisco, more than three thousand searches by the United States Postal
+          Inspection Service, and queries from federal Air Force bases, the Naval Criminal
+          Investigative Service, and the National Park Service, none of which are California
+          agencies and none of which have any clear jurisdiction over Grass Valley.
+        </p>
+        <p>
+          Most significantly, the data also includes
+          <strong
+            >1,175 searches of Grass Valley cameras by Homeland Security Investigations, Customs
+            and Border Protection, and the Border Patrol,</strong
+          >
+          every one of which happened
+          <em style="color: var(--red); font-style: normal">after</em> October 2023, when the
+          California Attorney General issued Bulletin 2023-DLE-06 explicitly prohibiting
+          California agencies from sharing ALPR data with federal immigration enforcement,
+          meaning that the law was clear and the data was shared anyway.
+        </p>
+        <p>
+          The records also show
+          <strong>more than 54,000 searches with no valid reason given,</strong> and every
+          "reason" field in the audit logs the public requested was stripped before release,
+          even though Flock's own portal claims those reasons are stored indefinitely.
+        </p>
+        <p>
+          Over thirty communities have ended their Flock contracts in the past year, including
+          Santa Cruz, which became the first city in California to do so by a 6-to-1 council
+          vote, Mountain View, which followed unanimously in February, and South Pasadena,
+          Cambridge, Denver, Austin, and Eugene, all of which have walked away.
+        </p>
+        <p>
+          I am asking the council to do three things:
+          <strong>terminate Grass Valley PD's contract with Flock Safety,</strong> publicly
+          disclose the reason fields and search logs that were withheld from our public records
+          requests, and commit that no ALPR data collected by Grass Valley PD will ever again
+          be shared with any non-California entity. Thank you.
+        </p>
+      </div>
+      <div class="comment-box hidden" data-jurisdiction="ncso" data-length="short">
+        <p>
+          My name is <span class="comment-blank">[your name]</span>, I'm a resident of Nevada
+          County, and I'm here to ask the Board to use its budget authority to defund the
+          Sheriff's contract with Flock Safety.
+        </p>
+        <p>
+          Public records obtained through the California Public Records Act show that the Flock
+          cameras owned by the Nevada County Sheriff's Office have been searched
           <strong>over 13 million times</strong> by
+          <strong>4,654 different outside agencies</strong>, with more than
+          <strong>five million</strong> of those searches coming from agencies outside
+          California, which directly violates California Civil Code Section 1798.90.55(b).
+        </p>
+        <p>
+          Flock also publishes a "transparency portal" that the Sheriff's Office points
+          residents to, which claims about 130 searches happen in a 30-day window, while our
+          records covering the same window show <strong>271,577 searches</strong>, an undercount
+          of two thousand times.
+        </p>
+        <p>
+          Over thirty communities have already ended their Flock contracts, with Santa Cruz
+          becoming the first city in California to do so, and we are asking Nevada County to be
+          the next. Thank you.
+        </p>
+      </div>
+      <div class="comment-box hidden" data-jurisdiction="ncso" data-length="personal">
+        <p>
+          My name is <span class="comment-blank">[your name]</span>, I'm a resident of Nevada
+          County, and I'm not here as a lawyer or a policy expert but as someone who lives
+          here, drives here, and is raising
+          <span class="comment-blank">[my family / my kids]</span> here, which is why I want
+          to talk about what it means that the Sheriff's Flock cameras went up without ever
+          asking the people of this county.
+        </p>
+        <p>
+          There was no town hall, no ballot measure, and no public hearing where the question
+          of whether our county should be plugged into a national surveillance network was put
+          to the people who would actually be surveilled by it; instead, the contract was
+          signed, the cameras went up, and most of us only found out about any of it because
+          someone filed a public records request.
+        </p>
+        <p>
+          The bigger issue, though, isn't even how the decision was made, but what these
+          cameras actually do, because every time I drive past one I am photographed and my
+          plate, my vehicle, my route, and the time and date of my trip are all logged into a
+          private company's database, not because I am suspected of any crime but simply because
+          I drove down a public road, and that is the literal definition of a general warrant
+          that <strong>the Fourth Amendment was written to forbid.</strong>
+        </p>
+        <p>
+          Some will say "if you've done nothing wrong, you have nothing to hide," and I would
+          ask them whether they lock their front door at night or close their curtains, not
+          because they are hiding crimes but because protecting a private life is a basic right
+          that license plate readers strip away from every resident, without consent, without a
+          warrant, and without any real chance to object.
+        </p>
+        <p>
+          None of this is theoretical, either, because ALPR data has been used elsewhere to
+          track domestic violence victims to safe houses, to misidentify innocent drivers in
+          ways that have led to guns-drawn traffic stops, and here in Nevada County it has been
+          handed over to dozens of federal and out-of-state agencies that California law
+          specifically forbids from receiving it, all of which is to say that this technology
+          has not made our county safer but has only made us watched.
+        </p>
+        <p>
+          I am asking the Board to use the authority you do have, which is your control over
+          this office's budget, to <strong>defund the Flock contract</strong>, and to restore
+          the basic principle that in this country the government cannot follow you everywhere
+          unless it has a specific reason to. Thank you.
+        </p>
+      </div>
+      <div class="comment-box hidden" data-jurisdiction="ncso" data-length="long">
+        <p>
+          My name is <span class="comment-blank">[your name]</span>, I'm a resident of Nevada
+          County, and I'm here this morning because over the past year our county has been
+          quietly plugged into a national surveillance network operated by a private company
+          called Flock Safety, which is something most residents have no idea happened, and I
+          am asking this Board to look at the public records yourselves and use your budget
+          authority to end this contract.
+        </p>
+        <p>
+          Since installation, the Flock cameras owned by the Nevada County Sheriff's Office have
+          been searched <strong>over 13 million times</strong> by
           <strong>4,654 different outside agencies</strong>, with more than
           <strong>five million</strong> of those searches coming from agencies outside
           California, which is a direct violation of California Civil Code Section
@@ -499,21 +641,9 @@
           any clear jurisdiction over Nevada County.
         </p>
         <p>
-          Most significantly, the data also includes
-          <strong
-            >1,175 searches of Grass Valley cameras by Homeland Security Investigations, Customs
-            and Border Protection, and the Border Patrol,</strong
-          >
-          every one of which happened
-          <em style="color: var(--red); font-style: normal">after</em> October 2023, when the
-          California Attorney General issued Bulletin 2023-DLE-06 explicitly prohibiting
-          California agencies from sharing ALPR data with federal immigration enforcement,
-          meaning that the law was clear and the data was shared anyway.
-        </p>
-        <p>
-          Flock also publishes what it calls a "transparency portal" that this agency directs
-          residents to, and that portal claims roughly 130 searches happened in a typical 30-day
-          window, while our public records covering the exact same 30-day window show
+          Flock also publishes what it calls a "transparency portal" that the Sheriff's Office
+          points residents to, and that portal claims roughly 130 searches happened in a typical
+          30-day window, while our public records covering the exact same 30-day window show
           <strong>271,577 searches</strong>, an undercount of roughly two thousand times, with
           every "reason" field in the released audit logs stripped before they ever reached
           the public.
@@ -525,11 +655,12 @@
           Cambridge, Denver, Austin, and Eugene, all of which have walked away.
         </p>
         <p>
-          I am asking you to do three things:
-          <strong>terminate the contract with Flock Safety,</strong> publicly disclose the
-          reason fields and search logs that were withheld from our public records requests,
-          and commit that no ALPR data collected here will ever again be shared with any
-          non-California entity. Thank you.
+          The Sheriff is independently elected and this Board cannot order him to do anything,
+          but you control his budget, and I am asking you to do three things:
+          <strong>defund the Flock Safety line item</strong> in the next budget cycle, pass a
+          resolution publicly calling on the Sheriff to terminate the contract, and demand the
+          public disclosure of every reason field and search log that was withheld from our
+          public records requests. Thank you.
         </p>
       </div>
       <button

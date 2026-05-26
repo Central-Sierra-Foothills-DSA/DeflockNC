@@ -18,16 +18,33 @@ document.querySelectorAll(".stat-cell, .demand-item, .agency-item").forEach((el)
   observer.observe(el);
 });
 
-// Short/long toggle for sample public comment
+// Jurisdiction + length tabs for sample public comment
+function updateCommentBoxes() {
+  const activeJurisdiction = document.querySelector(".comment-jurisdiction.active")?.dataset
+    .jurisdiction;
+  const activeLength = document.querySelector(".comment-tab.active")?.dataset.show;
+  document.querySelectorAll(".comment-box").forEach((box) => {
+    const match =
+      box.dataset.jurisdiction === activeJurisdiction && box.dataset.length === activeLength;
+    box.classList.toggle("hidden", !match);
+  });
+}
+
+document.querySelectorAll(".comment-jurisdiction").forEach((tab) => {
+  tab.addEventListener("click", () => {
+    document
+      .querySelectorAll(".comment-jurisdiction")
+      .forEach((t) => t.classList.toggle("active", t === tab));
+    updateCommentBoxes();
+  });
+});
+
 document.querySelectorAll(".comment-tab").forEach((tab) => {
   tab.addEventListener("click", () => {
-    const target = tab.dataset.show;
     document
       .querySelectorAll(".comment-tab")
       .forEach((t) => t.classList.toggle("active", t === tab));
-    document
-      .querySelectorAll(".comment-box")
-      .forEach((box) => box.classList.toggle("hidden", box.dataset.length !== target));
+    updateCommentBoxes();
   });
 });
 

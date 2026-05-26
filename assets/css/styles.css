@@ -765,6 +765,43 @@ body::before {
   margin-bottom: 2.5rem;
 }
 
+.comment-jurisdictions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px;
+  margin-bottom: 1rem;
+  max-width: 70ch;
+}
+
+.comment-jurisdiction {
+  flex: 1 1 240px;
+  background: var(--black);
+  border: 1px solid rgb(255 255 255 / 10%);
+  color: #9aa6b2;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.comment-jurisdiction:hover {
+  color: #fff;
+  border-color: rgb(255 255 255 / 25%);
+}
+
+.comment-jurisdiction.active {
+  background: #1a0808;
+  color: #fff;
+  border-color: var(--red);
+  border-left-width: 3px;
+}
+
 .comment-tabs {
   display: flex;
   gap: 1px;
