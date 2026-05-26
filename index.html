@@ -21,6 +21,7 @@
         <li><a href="#demands">Demands</a></li>
         <li><a href="#act">Take Action</a></li>
         <li><a href="#comment">Speak Up</a></li>
+        <li><a href="#signup">Sign Up</a></li>
         <li><a href="flock-101.html">Flock 101 →</a></li>
       </ul>
     </nav>
@@ -537,6 +538,44 @@
       >
         Copy To Clipboard
       </button>
+    </section>
+
+    <!-- MAILING LIST SIGNUP -->
+    <section class="signup" id="signup">
+      <p class="section-label">// Stay In The Loop</p>
+      <h2 class="signup-heading">Join The Mailing List.</h2>
+      <p class="signup-sub">
+        Get updates on the campaign, meeting alerts, and notice when a vote is coming up that
+        actually needs people in the room. No spam, and we keep your email to ourselves.
+      </p>
+      <form
+        class="signup-form"
+        id="signup-form"
+        action="https://docs.google.com/forms/d/e/1FAIpQLSfRXDvOaaJpPqdY3wkcTV3ZaiMJx8h5vtkP1STHYj3GF87PhA/formResponse"
+        method="POST"
+        target="signup-sink"
+      >
+        <label class="signup-field">
+          <span class="signup-label">Name</span>
+          <input type="text" name="entry.41851953" required autocomplete="name" />
+        </label>
+        <label class="signup-field">
+          <span class="signup-label">Email</span>
+          <input type="email" name="entry.1646014132" required autocomplete="email" />
+        </label>
+        <label class="signup-field">
+          <span class="signup-label">What part of the county? <em>(optional)</em></span>
+          <input type="text" name="entry.853049308" autocomplete="off" />
+        </label>
+        <button class="signup-submit" type="submit">Join The List →</button>
+      </form>
+      <div class="signup-success" id="signup-success" hidden>
+        <p><strong>You're on the list.</strong></p>
+        <p>
+          We'll email you when a vote, meeting, or campaign update needs you in the room.
+        </p>
+      </div>
+      <iframe name="signup-sink" id="signup-sink" style="display: none" title="form sink"></iframe>
     </section>
 
     <footer>

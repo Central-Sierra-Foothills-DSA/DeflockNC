@@ -858,6 +858,133 @@ body::before {
   background: #16a34a;
 }
 
+/* ── MAILING LIST SIGNUP ── */
+.signup {
+  padding: 80px 5vw;
+  background: var(--dark);
+  border-top: 3px solid var(--red);
+}
+
+.signup-heading {
+  font-family: var(--display);
+  font-weight: 900;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.signup-sub {
+  font-size: 1.05rem;
+  color: #9aa6b2;
+  line-height: 1.6;
+  max-width: 60ch;
+  margin-bottom: 2rem;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 560px;
+  padding: 2rem;
+  background: var(--black);
+  border-left: 3px solid var(--red);
+}
+
+.signup-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.signup-label {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #9aa6b2;
+}
+
+.signup-label em {
+  font-style: normal;
+  color: #5c6975;
+  text-transform: none;
+  letter-spacing: 0.04em;
+}
+
+.signup-form input {
+  appearance: none;
+  background: var(--dark);
+  border: 1px solid rgb(255 255 255 / 8%);
+  border-left: 2px solid rgb(220 38 38 / 25%);
+  color: #fff;
+  font-family: var(--barlow, system-ui);
+  font-size: 1rem;
+  padding: 0.85rem 1rem;
+  transition:
+    border-color 0.15s ease,
+    background 0.15s ease;
+}
+
+.signup-form input:focus {
+  outline: none;
+  border-color: rgb(255 255 255 / 18%);
+  border-left-color: var(--red);
+  background: #161b22;
+}
+
+.signup-submit {
+  align-self: flex-start;
+  background: var(--red);
+  color: #fff;
+  border: none;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 1rem 1.6rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background 0.15s ease;
+}
+
+.signup-submit:hover {
+  background: #b91c1c;
+}
+
+.signup-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.signup-success {
+  max-width: 560px;
+  padding: 2rem;
+  background: var(--black);
+  border-left: 3px solid #16a34a;
+  color: #cdd6df;
+  font-family: var(--barlow, system-ui);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.signup-success p {
+  margin: 0 0 0.5rem;
+}
+
+.signup-success p:last-child {
+  margin-bottom: 0;
+  color: #9aa6b2;
+}
+
+.signup-success strong {
+  color: #fff;
+  font-family: var(--display);
+  font-size: 1.4rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
 /* ── ACTION ── */
 .action {
   padding: 80px 5vw;

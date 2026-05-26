@@ -31,6 +31,30 @@ document.querySelectorAll(".comment-tab").forEach((tab) => {
   });
 });
 
+// Mailing-list form: swap to success message after Google receives it
+const signupForm = document.getElementById("signup-form");
+const signupSuccess = document.getElementById("signup-success");
+const signupSink = document.getElementById("signup-sink");
+if (signupForm && signupSuccess && signupSink) {
+  signupForm.addEventListener("submit", () => {
+    const submit = signupForm.querySelector(".signup-submit");
+    if (submit) {
+      submit.disabled = true;
+      submit.textContent = "Sending…";
+    }
+    // The form posts to a hidden iframe; when Google's response loads, swap UI.
+    signupSink.addEventListener(
+      "load",
+      () => {
+        signupForm.hidden = true;
+        signupSuccess.hidden = false;
+        signupSuccess.scrollIntoView({ behavior: "smooth", block: "center" });
+      },
+      { once: true },
+    );
+  });
+}
+
 // Copy-to-clipboard for sample public comment
 document.querySelectorAll("[data-copy-target]").forEach((btn) => {
   btn.addEventListener("click", async () => {
