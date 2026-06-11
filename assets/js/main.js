@@ -18,6 +18,21 @@ document.querySelectorAll(".stat-cell, .demand-item, .agency-item").forEach((el)
   observer.observe(el);
 });
 
+// Jurisdiction tabs for email-officials section
+document.querySelectorAll(".email-jurisdiction").forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const target = tab.dataset.jurisdiction;
+    document
+      .querySelectorAll(".email-jurisdiction")
+      .forEach((t) => t.classList.toggle("active", t === tab));
+    document
+      .querySelectorAll(".email-panel")
+      .forEach((panel) =>
+        panel.classList.toggle("hidden", panel.dataset.jurisdiction !== target),
+      );
+  });
+});
+
 // Jurisdiction + length tabs for sample public comment
 function updateCommentBoxes() {
   const activeJurisdiction = document.querySelector(".comment-jurisdiction.active")?.dataset

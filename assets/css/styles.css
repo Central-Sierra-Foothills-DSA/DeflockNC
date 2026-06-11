@@ -895,6 +895,142 @@ body::before {
   background: #16a34a;
 }
 
+/* ── EMAIL OFFICIALS ── */
+.email-officials {
+  padding: 80px 5vw;
+  background: var(--dark);
+  border-top: 3px solid var(--red);
+}
+
+.email-heading {
+  font-family: var(--display);
+  font-weight: 900;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.email-sub {
+  font-size: 1.05rem;
+  color: #9aa6b2;
+  line-height: 1.6;
+  max-width: 60ch;
+  margin-bottom: 2rem;
+}
+
+.email-jurisdictions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px;
+  margin-bottom: 2rem;
+  max-width: 70ch;
+}
+
+.email-jurisdiction {
+  flex: 1 1 240px;
+  background: var(--black);
+  border: 1px solid rgb(255 255 255 / 10%);
+  color: #9aa6b2;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.email-jurisdiction:hover {
+  color: #fff;
+  border-color: rgb(255 255 255 / 25%);
+}
+
+.email-jurisdiction.active {
+  background: #1a0808;
+  color: #fff;
+  border-color: var(--red);
+  border-left-width: 3px;
+}
+
+.email-panel.hidden {
+  display: none;
+}
+
+.email-cta {
+  margin-bottom: 1.5rem;
+}
+
+.email-people-label,
+.email-template-label {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: #9aa6b2;
+  line-height: 1.6;
+  max-width: 70ch;
+  margin: 1.5rem 0 0.75rem;
+}
+
+.email-people-label code {
+  font-size: 0.85em;
+  background: var(--black);
+  padding: 0.1rem 0.35rem;
+  color: var(--red);
+}
+
+.email-people {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1px;
+  background: rgb(255 255 255 / 5%);
+  border: 1px solid rgb(255 255 255 / 5%);
+  max-width: 70ch;
+}
+
+.email-people li {
+  background: var(--black);
+}
+
+.email-people a {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 1rem 1.25rem;
+  color: #cdd6df;
+  text-decoration: none;
+  border-left: 2px solid transparent;
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.email-people a:hover {
+  background: #161b22;
+  border-left-color: var(--red);
+  color: #fff;
+}
+
+.email-people strong {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+}
+
+.email-people span {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #5c6975;
+}
+
 /* ── MAILING LIST SIGNUP ── */
 .signup {
   padding: 80px 5vw;
